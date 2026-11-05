@@ -30,7 +30,7 @@ test('logs in with valid credentials', async ({ page }) => {
 });
 
 test('shows an error with invalid credentials', async ({ page }) => {
-  await page.getByRole('textbox', { name: 'Username' }).fill('invalid-user');
+  await page.getByRole('textbox', { name: 'Username' }).fill('invalid-username');
   await page.getByRole('textbox', { name: 'Password' }).fill('invalid-password');
   await page.getByRole('button', { name: 'Login' }).click();
 
